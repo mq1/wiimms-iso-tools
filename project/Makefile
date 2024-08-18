@@ -112,8 +112,8 @@ VERSION		:= $(VERSION_NUM)$(BETA_SUFFIX)
 # compiler settings
 
 PRE		?= 
-CC		= $(PRE)gcc
-CPP		= $(PRE)g++
+CC		= $(PRE)gcc-14
+CPP		= $(PRE)g++-14
 STRIP		= $(PRE)strip
 
 #-------------------------------------------------------------------------------

@@ -1,0 +1,15 @@
+name: WIT
+
+on: push
+
+jobs:
+  build-macos-arm64:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v2
+      - run: SYSTEM=mac MACOSX_DEPLOYMENT_TARGET=11 make wit
+      - run: mv wit wit-macos-arm64
+      - uses: softprops/action-gh-release@v1
+        with:
+          name: Latest
+          files: wit-macos-arm64
