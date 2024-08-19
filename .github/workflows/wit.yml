@@ -2,6 +2,9 @@ name: WIT
 
 on: push
 
+permissions:
+  contents: write
+
 jobs:
   build-macos-arm64:
     runs-on: macos-14
