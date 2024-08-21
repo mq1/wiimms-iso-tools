@@ -54,7 +54,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          SYSTEM=x86_64 make -C project wit
+          set "SYSTEM=x86_64" && make -C project wit
           mv project/wit.exe wit-windows-x86_64.exe
       - uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
